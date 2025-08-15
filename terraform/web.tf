@@ -1,15 +1,7 @@
-# Build web application image
+# Use pre-built web application image
 resource "docker_image" "web" {
-  name = var.web_image_tag
-  build {
-    context    = "../"
-    dockerfile = "Dockerfile"
-  }
-  triggers = {
-    # Rebuild image when Dockerfile or requirements change
-    dockerfile_hash = filemd5("../Dockerfile")
-    requirements_hash = filemd5("../requirements.txt")
-  }
+  name         = var.web_image_tag
+  keep_locally = true
 }
 
 # Web application container
