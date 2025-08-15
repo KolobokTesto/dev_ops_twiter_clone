@@ -1,4 +1,4 @@
-.PHONY: help venv run test build up down tf-init tf-apply tf-destroy clean
+.PHONY: help venv run test build up down tf-init tf-apply tf-destroy clean reset
 
 # Default target
 help: ## Show this help message
@@ -51,6 +51,10 @@ clean: ## Clean up Docker resources and Python cache
 	docker volume prune -f
 	find . -type d -name __pycache__ -exec rm -rf {} + 2>/dev/null || true
 	find . -name "*.pyc" -delete
+
+reset: ## Complete reset for fresh installation testing
+	@echo "🧹 Resetting for fresh installation testing..."
+	@./scripts/reset.sh
 
 # Quick setup targets
 setup-compose: ## Quick setup with Docker Compose
