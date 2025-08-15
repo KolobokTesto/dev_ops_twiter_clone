@@ -1,0 +1,19 @@
+project_name = "tweets"
+web_port     = 8000
+
+# Django configuration
+django_secret_key    = "changeme"
+django_debug         = "1"
+django_allowed_hosts = "*"
+
+# Database configuration
+postgres_db       = "tweets"
+postgres_user     = "tweets"
+postgres_password = "tweets"
+
+# Media configuration
+media_root = "/app/media"
+
+# Docker images
+web_image_tag      = "tweets-web:dev"
+postgres_image_tag = "postgres:16-alpine"

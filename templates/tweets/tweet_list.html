@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Clone</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            max-width: 600px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            background-color: #f5f5f5;
+        }
+        .header { 
+            text-align: center; 
+            margin-bottom: 30px; 
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+        }
+        .tweet { 
+            background: white; 
+            margin: 10px 0; 
+            padding: 15px; 
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .tweet-author { 
+            font-weight: bold; 
+            color: #1d9bf0; 
+        }
+        .tweet-time { 
+            color: #536471; 
+            font-size: 0.9em; 
+        }
+        .tweet-text { 
+            margin: 10px 0; 
+            line-height: 1.4;
+        }
+        .tweet-image { 
+            max-width: 100%; 
+            height: auto; 
+            border-radius: 8px; 
+            margin-top: 10px;
+        }
+        .btn { 
+            background: #1d9bf0; 
+            color: white; 
+            padding: 10px 20px; 
+            text-decoration: none; 
+            border-radius: 20px;
+            display: inline-block;
+        }
+        .btn:hover { 
+            background: #1a8cd8; 
+        }
+        .no-tweets {
+            text-align: center;
+            color: #536471;
+            padding: 40px;
+            background: white;
+            border-radius: 8px;
+        }
+        .messages {
+            margin: 10px 0;
+        }
+        .messages div {
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 4px;
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🐦 Twitter Clone</h1>
+        <a href="{% url 'tweet_create' %}" class="btn">Post a Tweet</a>
+    </div>
+
+    {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+                <div>{{ message }}</div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    {% if tweets %}
+        {% for tweet in tweets %}
+            <div class="tweet">
+                <div class="tweet-author">{{ tweet.author.username|default:"Anonymous" }}</div>
+                <div class="tweet-time">{{ tweet.created_at|date:"M d, Y \a\t g:i A" }}</div>
+                <div class="tweet-text">{{ tweet.text }}</div>
+                {% if tweet.image %}
+                    <img src="{{ tweet.image.url }}" alt="Tweet image" class="tweet-image">
+                {% endif %}
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="no-tweets">
+            <h3>No tweets yet!</h3>
+            <p>Be the first to <a href="{% url 'tweet_create' %}">post a tweet</a>.</p>
+        </div>
+    {% endif %}
+</body>
+</html> 

@@ -1,0 +1,428 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   install all needed dependencies.
+#Pipfile.lock
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.env.local
+.env.*.local
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# Django specific
+media/
+staticfiles/
+static/
+*.sqlite3
+*.db
+
+# Local Django settings
+local_settings.py
+settings_local.py
+dev_settings.py
+
+# Django migrations (uncomment if you want to ignore them)
+# */migrations/*
+# !*/migrations/__init__.py
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+docker-compose.local.yml
+docker-compose.*.local.yml
+
+# Terraform
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+*.tfplan
+*.tfout
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate.backup
+terraform.tfstate.*.backup
+
+# Terraform crash logs
+crash.log
+
+# Exclude all .tfvars files, which are likely to contain sensitive data
+# such as password, private keys, and other secrets. These should not
+# be part of version control as they are data points which are potentially
+# sensitive and subject to change depending on the environment.
+*.auto.tfvars
+*.auto.tfvars.json
+
+# Include override files which are usually used for locally customizing
+# Terraform behavior
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
+*tfplan*
+
+# Kubernetes
+*.kubeconfig
+kubeconfig
+.kube/
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Vim
+*.swp
+*.swo
+*.swn
+.netrwhist
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+
+# JetBrains IDEs
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# nyc test coverage
+.nyc_output
+
+# Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
+
+# Bower dependency directory (https://bower.io/)
+bower_components
+
+# node_modules (if using any Node.js tools)
+node_modules/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+.parcel-cache
+
+# next.js build output
+.next
+
+# nuxt.js build output
+.nuxt
+
+# vuepress build output
+.vuepress/dist
+
+# Serverless directories
+.serverless/
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# Backup files
+*.bak
+*.backup
+*.tmp
+*.temp
+
+# SSL certificates
+*.pem
+*.crt
+*.key
+*.p12
+*.pfx
+
+# Monitoring and observability
+prometheus_data/
+grafana_data/
+elasticsearch_data/
+
+# Local override files
+docker-compose.override.yml
+.env.override
+terraform.tfvars
+values.local.yaml
+config.local.json
+
+# Build artifacts
+dist/
+build/
+*.tar.gz
+*.zip
+
+# Performance and profiling
+*.prof
+*.cpuprofile
+*.heapprofile
+
+# Database dumps and backups
+*.sql
+*.dump
+*.backup
+
+# Generated documentation
+docs/_build/
+site/
+
+# Cache directories
+.cache/
+.pytest_cache/
+.mypy_cache/
+
+# Local development files
+scratch/
+tmp/
+temp/
+playground/
+experiments/
+
+# Security scan results
+.security/
+security-report.*
+
+# Local configuration overrides
+local.env
+.env.development.local
+.env.production.local
+
+# Container volumes (if mounted locally)
+volumes/
+data/
+
+# Kubernetes local config
+.kube/
+*.kubeconfig
+
+# Helm
+charts/*.tgz
+
+# Temporary files created by editors and tools
+.#*
+*#
+.*.swp
+.*.swo
+
+# Ignore files created by Windows
+Desktop.ini
+$RECYCLE.BIN/
+
+# Ignore files created by macOS
+.AppleDouble
+.LSOverride
+Icon
+.DocumentRevisions-V100
+.fseventsd
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Ignore files created by Linux
+*~
+
+# Project specific ignores
+# Add any project-specific files or directories you want to ignore below this line
+
+# Example: ignore local development database
+# local.db
+
+# Example: ignore local media uploads
+# uploads/
+
+# Example: ignore local certificates
+# certs/ 
