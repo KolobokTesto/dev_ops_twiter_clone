@@ -12,6 +12,7 @@ WORKDIR /app
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
         libpq-dev \
+        postgresql-client \
         gcc \
         libjpeg-dev \
         zlib1g-dev \
