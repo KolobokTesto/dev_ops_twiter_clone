@@ -9,11 +9,18 @@ while ! pg_isready -h $POSTGRES_HOST -p $POSTGRES_PORT -U $POSTGRES_USER; do
 done
 echo "Database is up - continuing..."
 
+# Create migrations for custom apps if they don't exist
+echo "Checking for missing migrations..."
+python manage.py makemigrations --check --dry-run || {
+    echo "Creating missing migrations..."
+    python manage.py makemigrations
+}
+
 # Run migrations
 echo "Running database migrations..."
 python manage.py migrate --noinput
 
-# Create demo superuser if it doesn't exist
+# Create demo user if it doesn't exist
 echo "Creating demo user..."
 python manage.py shell -c "
 from django.contrib.auth.models import User
